@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { notoSerifLao, rubik } from "./fonts";
+
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -13,7 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${rubik.variable} ${notoSerifLao.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }
